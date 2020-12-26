@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arctic Circle</title>
+    <link rel="icon" href="icon.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Arctic Circle &#x1F9CA;</h1>
+        <div class="row">
+            <div class="col-sm-10">
+                <canvas id="draw">Sorry, your browser does not support canvas.</canvas>
+            </div>
+            <div class="col-sm-2">
+                <h3>Step: <span id="stepDisplay">0</span></h3>
+                <div style="padding: 15px"></div>
+                <h3>Step by step:</h3>
+                <div class="form-check" onclick="substeps()">
+                    <input type="checkbox" class="form-check-input" id="subSteps" checked>
+                    <label class="form-check-label" for="subSteps" value>Include substeps</label>
+                </div>
+                <div class="form-check" onclick="autoAdvance()">
+                    <input type="checkbox" class="form-check-input" id="autoAdvance">
+                    <label class="form-check-label" for="autoAdvance" value>Auto press (1s)</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="animation">
+                    <label class="form-check-label" for="animation" value>Enable animations</label>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg" onclick="update()" id="btnState">Generate Grid</button>
+                <div>you can press "N" to click this button.</div>
+                <div style="padding: 15px"></div>
+                <h3>Generate a random tiling:</h3>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Number of steps</label>
+                    <input class="form-control" id="generateRnd" aria-describedby="steps" placeholder="steps 1 - 200">
+                    <button type="button" class="btn btn-primary btn-lg" onclick="generate()" id="btnGen">Generate</button>
+                </div>
+                <div style="padding: 30px"></div>
+                <button type="button" class="btn btn-danger btn-lg" onclick="reset()" id="btnReset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>
+            <span>Made by: Walther Solis</span>
+            <span><a href="mailto:wrsp8@hotmail.com">wrsp8@hotmail.com</a></span>
+        </p>
+        <p>
+
+            <a href="https://www.youtube.com/watch?v=Yy7Q8IWNfHM&t=1288s&ab_channel=Mathologer"><span>Inspired by the
+                    Mathloger video of The Arctic Circle Theorem &#x1F3AC;</span></a>
+        </p>
+
+    </footer>
+</body>
+
+
+</html>
